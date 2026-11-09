@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A22D691-3290-4AB1-84C8-8C18E988BA68}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BioMusic</RootNamespace>
+    <AssemblyName>BioMusic</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://biomusic.frankreunion.com/Support</SupportUrl>
+    <ProductName>BioMusic</ProductName>
+    <PublisherName>Garrett Miller</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>Publish.htm</WebPage>
+    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationVersion>0.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>bin\x86\Release\BioMusic.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\BioMusic.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ObjectListView, Version=2.5.1.2598, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ObjectListViewDemo\ObjectListView\bin\Release\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CSharpMidiToolkitV5_demo\CSharpMidiToolkitV5_demo\Sanford.Multimedia.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\Finite State Machine\FractalStateMachine.cs" />
+    <Compile Include="Code\Finite State Machine\FSMState.cs" />
+    <Compile Include="Code\Finite State Machine\StateMachine.cs" />
+    <Compile Include="Code\Forms\ChordSetupDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\Forms\ChordSetupDialog.Designer.cs">
+      <DependentUpon>ChordSetupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Forms\Controls\MusicStructureViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\Forms\Controls\MusicStructureViewer.Designer.cs">
+      <DependentUpon>MusicStructureViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Forms\Controls\StreamControlPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\Forms\Controls\StreamControlPanel.Designer.cs">
+      <DependentUpon>StreamControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Forms\Controls\MusicWebViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\Forms\Controls\MusicWebViewForm.Designer.cs">
+      <DependentUpon>MusicWebViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Forms\TransitionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\Forms\TransitionDialog.Designer.cs">
+      <DependentUpon>TransitionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Forms\Utility\InstrumentChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\Forms\Utility\InstrumentChooser.Designer.cs">
+      <DependentUpon>InstrumentChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Forms\Utility\PianoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\Forms\Utility\PianoForm.Designer.cs">
+      <DependentUpon>PianoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Forms\Utility\StructureChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\Forms\Utility\StructureChooser.Designer.cs">
+      <DependentUpon>StructureChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Genetic Algorithm Code\BaseGene.cs" />
+    <Compile Include="Code\Genetic Algorithm Code\BioSequence.cs" />
+    <Compile Include="Code\Genetic Algorithm Code\BioSequenceGene.cs" />
+    <Compile Include="Code\Forms\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\Forms\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Genetic Algorithm Code\GeneticAlgorithm.cs" />
+    <Compile Include="Code\MIDI Interface\MIDIInterface.cs" />
+    <Compile Include="Code\Music Structure\MusicFormBase.cs" />
+    <Compile Include="Code\Music Structure\MusicFormCell.cs" />
+    <Compile Include="Code\Music Structure\MusicFormMeasure.cs" />
+    <Compile Include="Code\Music Structure\MusicFormMotif.cs" />
+    <Compile Include="Code\Music Structure\MusicFormNote.cs" />
+    <Compile Include="Code\Music Structure\MusicFormPhrase.cs" />
+    <Compile Include="Code\Music Structure\MusicFormSection.cs" />
+    <Compile Include="Code\Music Structure\MusicFormSong.cs" />
+    <Compile Include="Code\Music Structure\Scale.cs" />
+    <Compile Include="Code\Program.cs" />
+    <Compile Include="Code\Project\Project.cs" />
+    <Compile Include="Code\Utility\EnumeratedDelegate.cs" />
+    <Compile Include="Code\Utility\LocalNullException.cs" />
+    <Compile Include="Code\Utility\Logger.cs" />
+    <Compile Include="Code\Utility\Probability.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Code\Forms\ChordSetupDialog.resx">
+      <DependentUpon>ChordSetupDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\Forms\Controls\MusicStructureViewer.resx">
+      <DependentUpon>MusicStructureViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\Forms\Controls\StreamControlPanel.resx">
+      <DependentUpon>StreamControlPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\Forms\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\Forms\Controls\MusicWebViewForm.resx">
+      <DependentUpon>MusicWebViewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\Forms\Utility\InstrumentChooser.resx">
+      <DependentUpon>InstrumentChooser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\Forms\Utility\PianoForm.resx">
+      <DependentUpon>PianoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\Forms\Utility\StructureChooser.resx">
+      <DependentUpon>StructureChooser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Settings Etc\app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Code\Utility\Music Util\ScaleBuilder.cs" />
+    <Compile Include="Settings Etc\Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CSharpMidiToolkitV5_demo\CSharpMidiToolkitV5_demo\Sanford.Multimedia.Midi\Sanford.Multimedia.Midi.csproj">
+      <Project>{4269C72A-8D3A-4737-8F89-72EAA33EA9E1}</Project>
+      <Name>Sanford.Multimedia.Midi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSharpMidiToolkitV5_demo\CSharpMidiToolkitV5_demo\SequencerDemo\SequencerDemo.csproj">
+      <Project>{90480CE5-E392-4713-AB5C-7D659ACA0B85}</Project>
+      <Name>SequencerDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\midi-dot-net_src_1.1.0\midi-dot-net\Midi\Midi.csproj">
+      <Project>{F60D8B7B-2D2E-4B94-A736-3783FFE1A25C}</Project>
+      <Name>Midi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ObjectListViewDemo\ObjectListView\ObjectListView2008.csproj">
+      <Project>{18FEDA0C-D147-4286-B39A-01204808106A}</Project>
+      <Name>ObjectListView2008</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="SequencerDemo">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
